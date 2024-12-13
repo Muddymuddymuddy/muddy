@@ -5,23 +5,161 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lonely Souljaz - Cult Shotta</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General reset for better styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            width: 50px;
+            margin-right: 10px;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+        }
+
+        .user-info, .auth-info {
+            text-align: right;
+            margin: 5px 0;
+        }
+
+        .search-container {
+            flex-basis: 100%;
+            margin-top: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            margin-top: 5px;
+        }
+
+        .search-bar input {
+            flex-grow: 1;
+            padding: 5px;
+        }
+
+        .go-btn {
+            padding: 5px 10px;
+            background: #444;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+        }
+
+        .sidebar {
+            flex: 1;
+            min-width: 200px;
+            margin-right: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin: 5px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .sidebar ul li.active > a {
+            font-weight: bold;
+            color: #007BFF;
+        }
+
+        .main-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        section {
+            padding: 10px;
+            background: #f4f4f4;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .user-info, .auth-info {
+                text-align: left;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                margin: 0 0 10px 0;
+            }
+
+            .main-content {
+                margin: 0;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="logo.png" alt="Lonely Souljaz Logo" class=" logo">
+            <img src="logo.png" alt="Lonely Souljaz Logo" class="logo">
             <h1 class="brand">Lonely Souljaz</h1>
         </div>
         <div class="user-info">
-            <span class="messages">messages <strong>0</strong></span>
-            <span class="orders">orders <strong>0</strong></span>
-            <span class="balance">account <strong>₿0.000</strong></span>
+            <span class="messages">Messages: <strong>0</strong></span>
+            <span class="orders">Orders: <strong>0</strong></span>
+            <span class="balance">Account: <strong>₿0.000</strong></span>
         </div>
         <div class="auth-info">
             <span class="hello-user">Hi, <strong>Soulja</strong></span>
             <div class="auth-links">
-                <a href="#" class="settings-link">settings</a> <span class="separator">-</span>
-                <a href="#" class="logout-link">logout</a>
+                <a href="#" class="settings-link">Settings</a> <span class="separator">-</span>
+                <a href="#" class="logout-link">Logout</a>
             </div>
         </div>
         <div class="search-container">
@@ -36,22 +174,19 @@
         <div class="sidebar">
             <ul>
                 <li class="active"><a href="index.html">Home</a></li>
-                <li class="active"><a href="golo-club.html">Golo Club</a></li>
-                <li class="active"><a href="soulja-swag.html">Soulja Swag</a></li>
-                <li class="active"><a href="lonely-souljaz.html">Lonely Souljaz</a> <span class="count">(3)</span>
+                <li><a href="golo-club.html">Golo Club</a></li>
+                <li><a href="soulja-swag.html">Soulja Swag</a></li>
+                <li>
+                    <a href="lonely-souljaz.html">Lonely Souljaz</a> <span class="count">(3)</span>
                     <ul>
                         <li><a href="lil-golo.html">Lil Golo</a></li>
                         <li><a href="tanboymiguel.html">TanBoyMiguel</a></li>
                         <li><a href="cult-shotta.html">Cult Shotta</a></li>
                     </ul>
                 </li>
-                <li class="active"><a href="music.html">Music</a></li>
+                <li><a href="music.html">Music</a></li>
                 <li class="blurred"><a href="#">Category 1</a></li>
                 <li class="blurred"><a href="#">Category 2</a></li>
-                <li class="blurred"><a href="#">Category 3</a></li>
-                <li class="blurred"><a href="#">Category 4</a></li>
-                <li class="blurred"><a href="#">Category 5</a></li>
-                <li class="blurred"><a href="#">Category 6</a></li>
             </ul>
         </div>
         <div class="main-content">
@@ -64,8 +199,8 @@
         </div>
     </div>
     <footer>
-        <p>Copyright &copy; 2024 Lonely Souljaz <a href="#" class="footer-link">source code</a></p>
+        <p>&copy; 2024 Lonely Souljaz <a href="#" class="footer-link">Source Code</a></p>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
+

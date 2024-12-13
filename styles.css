@@ -1,0 +1,269 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0; /* Light gray color for the top bar */
+    padding: 10px 20px;
+    color: #333; /* Dark gray color for text */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 200px; /* Adjust the height of the logo to make it twice as big */
+}
+
+.brand {
+    margin-left: 10px;
+    font-size: 2em;
+    font-weight: bold;
+    color: #333; /* Dark gray color for Lonely Souljaz */
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.user-info span {
+    margin: 0 10px;
+    color: #006400; /* Darker green color for messages, orders, and balance */
+}
+
+.user-info strong {
+    font-weight: bold;
+}
+
+.auth-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.hello-user {
+    color: #000; /* Black color for Hello */
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.hello-user strong {
+    font-weight: bold;
+}
+
+.auth-links {
+    display: flex;
+    align-items: center;
+}
+
+.settings-link,
+.logout-link {
+    color: #006400; /* Darker green color for links */
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.settings-link:hover,
+.logout-link:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    color: #006400; /* Darker green color for separator */
+    margin: 0 5px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Centering the search bar */
+    margin-top: 10px;
+}
+
+.search-label {
+    margin-right: 10px;
+    font-size: 1.1em;
+    color: #333; /* Dark gray for search label */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    margin-right: 0;
+    font-size: 1em;
+    border-right: none;
+}
+
+.go-btn {
+    background-color: #d3d3d3; /* Gray color for the go button */
+    color: #333; /* Dark gray color for text */
+    border: 1px solid #ccc;
+    border-radius: 0 5px 5px 0;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.go-btn:hover {
+    background-color: #a9a9a9; /* Darker shade of gray on hover */
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    padding: 0 20px; /* Less padding between sidebar and main content */
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #ffffff; /* White color for the sidebar */
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
+    overflow-y: auto;
+    height: calc(100vh - 70px); /* Adjust height to exclude header */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.sidebar li a {
+    text-decoration: none;
+    color: #006400; /* Darker green color for sidebar links */
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.sidebar li a:hover {
+    color: #00bfff;
+}
+
+.sidebar li .count {
+    color: #d3d3d3; /* Light gray color for the number next to Lonely Souljaz */
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.sidebar li.active ul {
+    display: block;
+}
+
+.sidebar li ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.sidebar li ul li {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+.blurred {
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+.main-content {
+    width: 80%;
+    padding: 40px;
+    overflow-y: auto;
+    background-color: #ffffff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.7);
+}
+
+h1 {
+    color: #000;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.highlight-link {
+    color: #006400;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.highlight-link:hover {
+    text-decoration: underline;
+}
+
+a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #1e90ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #00bfff;
+}
+
+.header-line {
+    width: 100%;
+    height: 1px;
+    background-color: #a9a9a9; /* Medium gray line */
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0; /* Light gray color for the footer */
+    color: #333; /* Dark gray color for the footer text */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-link {
+    color: #006400; /* Darker green color for footer link */
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
